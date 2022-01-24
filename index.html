@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        .bg-dark {
+            background-color: black !important;
+        }
+
+        p {
+            color: rgb(255, 173, 173);
+            text-shadow: 1px 1px green;
+        }
+        .btn-primary {
+            outline: none;
+        }
+
+
+        .rainbow-3:hover{
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, red);
+            animation:slidebg 2s linear infinite;
+        }
+
+        @keyframes slidebg {
+            to {
+                background-position:20vw;
+            }
+        }
+
+        .rainbow-outline {
+            box-shadow: 75px 0 0 rgba(255, 255, 255, 0) inset,
+                        0 75px 0 rgba(255, 255, 255, 0) inset,
+                        -75px 0 0 rgba(255, 255, 255, 0) inset,
+                        0 -75px 0 rgba(255, 255, 255, 0) inset !important;
+            transition: all .3s;
+        }
+        .rainbow-outline:hover {
+            border: 2px solid transparent;
+            box-shadow: 2px 0 0 rgba(255, 0, 0, 1) inset,
+                        0 2px 0 rgba(252, 150, 0, 1) inset,
+                        -2px 0 0 rgba(0, 255, 0, 1) inset,
+                        0 -2px 0 rgba(0, 150, 255, 1) inset !important;
+        }
+
+        .btn-plain {
+            color: white;
+            border: 1px solid whitesmoke;
+        }
+
+        .btn-plain:hover {
+            color: white;
+        }
+
+        .rainbowed { 
+            height: 100%;
+            width: 100%;
+            left:0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: relative;
+            background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+            background-size: 1800% 1800%;
+            animation: rainbow 3s ease infinite;
+        }
+
+        @keyframes rainbow { 
+            0%{background-position:0% 82%}
+            50%{background-position:100% 19%}
+            100%{background-position:0% 82%}
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .bg-grey {
+            background-color: rgb(31, 31, 31);
+        }
+
+        
+    </style>
+    <title>ROYGBIV</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">
+                <span style="color: #dc3545;">R</span>
+                <span style="color: #fd7e14">O</span>
+                <span style="color: #ffc107">Y</span>
+                <span style="color: #198754">G</span>
+                <span style="color: #0d6efd">B</span>
+                <span style="color: #6610f2">I</span>
+                <span style="color: #8F00FF">V</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#colorize">Colorize</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#about">Get In Touch</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <button class="btn btn-outline-light" type="">Sign In</button>
+            </form>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container-fluid bg-dark text-white">
+        <div class="container mb-2" id="home">
+            <div class="row p-md-5 d-flex">
+                <div class="col col-12 col-md-6 mb-2 order-1 order-md-0">
+                    <div class="pt-5">
+                        <p class="display-1 fw-bold mb-1">Color Place</p>
+                        <p class="display-6" style="font-size: 1.5em;">Dullness is a state of mind, color brightens your life. Join ROYGBIV to experience the otherside</p>
+                        <div>
+                            <input class="btn btn-primary rainbow-3 me-3" type="button" value="Colorize me!">
+                            <button type="button" class="btn btn-plain rainbow-outline">Learn more...</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-md-6 order-0 order-md-1">
+                    <div class="rainbowed">
+                        <img src="./img/1.png" alt="pic">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row bg-dark text-white">
+            <div class="container">
+                <p class="display-6 text-center" style="width: 60%; margin: auto; text-shadow: none;font-size: 1.5em; font-style: italic; border-top: 2px dashed grey; border-bottom: 2px dashed grey; padding: 20px 0;"> Color is often misunderstood.. Glamourous as the rainbow may be, 
+                    humanity have not given the attention it needs.
+                    Life gets boring without colors. We be believe
+                    in the power of colors, and have set out to beautify humanity.
+                    The journey is just starting.
+                </p>
+            </div>
+        </div>
+        <div class="container p-md-5" id="colorize">
+            <div class="row bg-dark text-white mt-5">
+                <div class="col-sm-6 mb-3 col-lg-4">
+                    <div class="card bg-grey">
+                        <div class="card-body mb-2">
+                            <h5 class="card-title">Vibrance</h5>
+                            <p class="card-text"  style="color: lightblue; text-shadow: none;">Vibrant colors add vibrancy in our lives. Add one that fits your lifestyle, and be vibrant.</p>
+                        </div>
+                        <div class="card-image">
+                                <img src="./img/b4.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6  mb-3 col-lg-4">
+                    <div class="card bg-grey">
+                        <div class="card-body">
+                            <h5 class="card-title">Elegance</h5>
+                            <p class="card-text"  style="color: lightcoral; text-shadow: none;">Elegant colors add "Elegancy" in our lives. Add one that fits your lifestyle, and be elegant.</p>
+                        </div>
+                            <div class="card-image">
+                                <img src="./img/b1.svg" alt="">
+                            </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="card bg-grey">
+                        <div class="card-body">
+                            <h5 class="card-title">Brilliance</h5>
+                            <p class="card-text" style="color: lightseagreen; text-shadow: none;">Brilliant colors add "Brilliancy" in our lives. Add one that fits your lifestyle, and be brilliant.</p>
+                            <div class="card-image">
+                                <img src="./img/b3.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-center text-white" id="about">
+    <div class="container p-4">
+        <section class="mb-4">
+        <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-facebook-f"></i
+            ></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-twitter"></i
+            ></a>
+
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-google"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-instagram"></i
+            ></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-linkedin-in"></i
+            ></a>
+
+            <!-- Github -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                ><i class="fab fa-github"></i
+            ></a>
+            </section>
+        <!-- Section: Social media -->
+
+        <section class="">
+        <form action="">
+            <div class="row d-flex justify-content-center">
+            <div class="col-auto">
+                <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+                </p>
+            </div>
+            <div class="col-md-5 col-12">
+                <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <label class="form-label" for="form5Example21">Email address</label>
+                </div>
+            </div>
+
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-outline-light mb-4">
+                    Subscribe
+                    </button>
+                </div>
+            </div>
+
+        </form>
+        </section>
+
+        <section class="mb-4">
+        <p>
+            We exist to to help in making the wold a better place. Don't just exist, live. Don't just earn, give. Together we can make this life beautiful. And above all, always add a bit of color in your life.
+        </p>
+        </section>
+        <section class="">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li>
+                    <a href="#home" class="text-white">Home</a>
+                    </li>
+                    <li>
+                    <a href="#colorize" class="text-white">Colorize</a>
+                    </li>
+                    <li>
+                    <a href="#about" class="text-white">About</a>
+                    </li>
+                    <li>
+                    <a href="#about" class="text-white">Get in Touch</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Contact</h5>
+                    roygbiv@color-art.com
+            </div>
+
+        </div>
+        </section>
+    </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Copyright:
+            <a class="text-white" href="">Hyelda Dzarma</a>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
